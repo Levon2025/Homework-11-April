@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+int string_len(const char*str){
+	int size = 0;
+	while(str[size] != '\0'){
+	size ++;
+}
+	return size;
+}	
+	int main(){
+	const char *text_string = "Hello PicsArt";
+	printf("%d",string_len(text_string));
+	return 0;
+}	
