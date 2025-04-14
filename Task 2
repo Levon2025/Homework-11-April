@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void revers_str(char*str){
+	int first = 0;
+	int second = 0;
+	while(str[second] != '\0'){
+		second ++;
+	}
+	second--;
+	while(first < second){
+		char temp = str[first];
+		str[first] = str[second];
+		str[second] = temp;
+		first ++;
+		second--;
+	}
+}
+int main(){
+	char str[] = "Hello";
+	printf("Oinginal is:%s\n",str);
+	revers_str(str);
+	printf("Reversed is:%s\n",str);
+	return 0;
+}
