@@ -1,0 +1,18 @@
+#include <stdio.h>
+void replace(char *str,char old_char, char new_char){
+	int index = 0;
+	while(str[index] != '\0'){
+	if(str[index] == old_char){
+		str[index] == new_char;
+}
+	index++;
+  }
+}
+int main(){
+  char text[] = "Picsart Academny";
+  char  old_char = 'P';
+  char  new_char = 'B';
+  replace(text,old_char,new_char);
+  printf("Replaced str is:%s\n",text);	
+  return 0;
+}
