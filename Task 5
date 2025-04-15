@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int find(const char *str,char c){
+	int index = 0;
+	while(str[index] != '\0'){
+		if(str[index] == c){
+			return index;
+}
+	index++;
+}
+	return -1;
+}	
+int main(){
+	const char *text = "Hello  Every one!";
+	char target = 'o';
+	int position = find(text,target);
+	if(position != -1){
+		printf(" %c Finded index is:%d\n",target,position);
+}else{
+	printf(" %c Not founded",target);
+}
+	return 0;
+}
