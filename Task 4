@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+void count(const char *str1,int *vowels,int *consonants){
+	*vowels = 0;
+	*consonants = 0;
+	while(*str1){
+	char ch = *str1;
+	if(ch > 'A' && ch < 'Z'){
+      ch = ch +32;
+ }
+	if((ch >= 'a' && ch <= 'z')){
+		if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
+			(*vowels)++;
+	}else{
+	   (*consonants)++;
+  }
+}
+	str1++;
+}
+	printf("Vowels:%d\n",*vowels);
+	printf("*Consonants:%d/n",*consonants);
+}
+int main(){
+	const char *text = "I will be a programer";
+	int vowels, consonants;
+	count(text,&vowels,&consonants);
+	return 0;
+}
