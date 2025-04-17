@@ -3,7 +3,7 @@ void replace(char *str,char old_char, char new_char){
 	int index = 0;
 	while(str[index] != '\0'){
 	if(str[index] == old_char){
-		str[index] == new_char;
+		str[index] = new_char;
 }
 	index++;
   }
